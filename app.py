@@ -2,6 +2,7 @@ from flask import jsonify, Flask, request
 import pandas as pd
 import numpy as np
 from joblib import load
+import os
 
 app = Flask(__name__)
 
@@ -39,3 +40,4 @@ if __name__ == "__main__":
     print("Starting Flask API server ...")
     port = int(os.environ.get("PORT", 5000))
     app.run(host = '0.0.0.0', port = port)
+
