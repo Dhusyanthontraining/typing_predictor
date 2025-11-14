@@ -1,9 +1,6 @@
 Flask
-fastapi
-uvicorn
-pandas
+gunicorn
 numpy
+pandas
 scikit-learn
 joblib
-python-multipart
-gunicorn
