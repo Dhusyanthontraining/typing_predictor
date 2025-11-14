@@ -5,7 +5,10 @@ from joblib import load
 import os
 
 app = Flask(__name__)
-
+@app.route("/", methods=["GET"])
+def home():
+    return "Typing Predictor API is running! Use POST /predict"
+    
 try:
     model = load("poly_reg_model.joblib")
     poly_transformer = load("poly_transformer.joblib")
@@ -40,4 +43,5 @@ if __name__ == "__main__":
     print("Starting Flask API server ...")
     port = int(os.environ.get("PORT", 5000))
     app.run(host = '0.0.0.0', port = port)
+
 
